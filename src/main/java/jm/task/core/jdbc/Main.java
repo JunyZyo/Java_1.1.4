@@ -23,12 +23,10 @@ public class Main {
 
             List<User> users = userService.getAllUsers();
             System.out.println("\nСписок всех пользователей в базе:");
-            users.forEach(user ->
-                    System.out.println(user.getId() + ": " + user.getName() + " " + user.getLastName() + ", " + user.getAge() + " лет")
-            );
-             userService.removeUserById(1);
-             userService.cleanUsersTable();
-             userService.dropUsersTable();
+            users.forEach(user -> System.out.println(user.getId() + ": " + user.getName() + " " + user.getLastName() + ", " + user.getAge() + " лет"));
+            userService.removeUserById(1);
+            userService.cleanUsersTable();
+            userService.dropUsersTable();
 
         } catch (SQLException e) {
             e.printStackTrace();
