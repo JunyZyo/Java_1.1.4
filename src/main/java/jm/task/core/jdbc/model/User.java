@@ -14,7 +14,7 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "lastname")
+    @Column(name = "lastName")
     private String lastName;
 
     @Column(name = "age")
@@ -34,7 +34,7 @@ public class User {
         return id;
     }
 
-    public void setId(Long id) {
+    protected void setId(Long id) {
         this.id = id;
     }
 
